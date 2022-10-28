@@ -5,7 +5,8 @@
     height: 50px;
     padding: 10px 20px;
     border-bottom: 1px solid lightgray;
-
+    position: sticky;
+    top: 0;
     .left {
         display: flex;
         align-items: center;
