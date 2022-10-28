@@ -1,60 +1,65 @@
+@import "../../style.scss";
+
 .navbar {
-    display: flex;;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    padding: 10px 20px;
-    border-bottom: 1px solid lightgray;
-    position: sticky;
-    top: 0;
-    .left {
+    @include themify($themes) {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 30px;
-
-        span {
-            font-weight: bold;
-            font-size: 20px;
-            color: darkblue;
-        }
-        .search {
+        height: 50px;
+        padding: 10px 20px;
+        border-bottom: 1px solid themed("border");
+        position: sticky;
+        top: 0;
+        background-color: themed("bg");
+        color: themed("textColor");
+        .left {
             display: flex;
             align-items: center;
-            gap: 10px;
-            border: 1px solid lightgray;
-            border-radius: 5px;
-            padding: 5px;
+            gap: 30px;
 
-            input {
-                border: none;
-                width: 500px;
-                padding: 6px 0px;
-                outline: none;
-            }
-
-        }
-    }
-
-    .right {
-        
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        .user {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-
-            img {
-                width: 30px;
-                border-radius: 50%;
-                height: 30px;
-                object-fit: cover;
-            }
             span {
+                font-weight: bold;
+                font-size: 20px;
+                color: themed("logo");
+            }
+            .search {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid themed("border");
+                border-radius: 5px;
+                padding: 5px;
 
+                input {
+                    border: none;
+                    width: 500px;
+                    padding: 6px 0px;
+                    outline: none;
+                    color: themed("textColor");
+                    background-color: transparent;
+                }
+
+            }
+        }
+
+        .right {
+            
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 500;
+
+                img {
+                    width: 30px;
+                    border-radius: 50%;
+                    height: 30px;
+                    object-fit: cover;
+                }
             }
         }
     }

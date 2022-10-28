@@ -1,5 +1,10 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider, Outlet, Navigate } from "react-router-dom"
+import { 
+  createBrowserRouter, 
+  RouterProvider, 
+  Outlet, 
+  Navigate } from "react-router-dom"
+import "./style.scss"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
 import Login from "./pages/login/Login.js"
@@ -14,7 +19,7 @@ function App() {
 
   const Layout = () => {
     return (
-      <div>
+      <div className="theme-dark">
         <NavBar />
         <div style={{display: "flex"}}>
           <LeftBar />
