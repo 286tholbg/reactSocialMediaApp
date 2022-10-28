@@ -10,7 +10,7 @@ import RightBar from "./components/rightBar/RightBar"
 
 function App() {
 
-  const currentUser = false
+  const currentUser = true
 
   const Layout = () => {
     return (
