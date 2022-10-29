@@ -1,4 +1,6 @@
 import "./navBar.scss"
+import React, {useContext} from "react"
+import { DarkModeContext } from "../../context/darkModeContext";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
@@ -12,6 +14,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
+    const {toggle, DarkMode} = useContext(DarkModeContext)
     return (
         <div className="navbar">
             <div className="left">
@@ -19,7 +22,10 @@ const NavBar = () => {
                     <span>lamasocial</span>
                 </Link>
                 <HomeOutlinedIcon />
-                <DarkModeOutlinedIcon />
+                {DarkMode ? 
+                    <WbSunnyOutlinedIcon onClick={toggle}/> :
+                    <DarkModeOutlinedIcon onClick={toggle}/>
+                }
                 <GridViewOutlinedIcon/>
                 <div className="search">
                     <SearchOutlinedIcon/>
