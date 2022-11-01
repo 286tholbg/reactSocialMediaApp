@@ -9,9 +9,6 @@
 - SCSS
 - Material UI
 
-- Node.js
-- MySQL
-
 This is a react social media
 
 Users can create an account, create a post, comment on other people's posts.
